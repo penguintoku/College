@@ -1,0 +1,25 @@
+1. Tokumaru Yahashi
+2. Project 2A (Matrix Multiple with Threads)
+3. Instructions
+	
+	a. Open terminal, "cd" all the way until you are the same 
+	directory with the file "matrixMult.cpp"
+	
+	b. To compile, copy/paste: 
+		make
+	
+	c. To run, type:
+		./ and press tab for auto-complete
+
+	d. To clean, type:
+		make clean
+
+4. The compiling has the following flags:
+	
+	The make file is reused from CS 240 with descriptions. 
+
+	If a matrix is not valid, it will create the output file 
+	with nothing written in it. 
+
+	The matrixMult.cpp has comments that explains what
+	my code does fairly clearly. 

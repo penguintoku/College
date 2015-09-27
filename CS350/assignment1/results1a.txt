@@ -1,0 +1,70 @@
+Tokumaru Yahashi
+CS 350
+Project 1A: Results
+
+These are the results that were done on G7 computer and PODS windows computer. Line by line was much faster than character by character. 
+
+When it was Linux and Windows, Linux seem to be more quicker than the Windows.
+---------------------------------------------------------------------------
+combinedFinal.c (character-by-character)
+
+Linux:
+
+Run 1:
+The total 'ftime' time:      0.016
+The total 'getCPUtime' time:      0.000
+
+Run 2:
+The total 'ftime' time:      0.013
+The total 'getCPUtime' time:      0.010
+
+Run 3:
+The total 'ftime' time:      0.017
+The total 'getCPUtime' time:      0.010
+
+Windows:
+
+Run 1:
+The total 'ftime' time:      0.018
+The total 'getCPUtime' time:      0.000
+
+Run 2:
+The total 'ftime' time:      0.015
+The total 'getCPUtime' time:      0.000
+
+Run 3:
+The total 'ftime' time:      0.017
+The total 'getCPUtime' time:      0.000
+
+---------------------------------------------------------------------------
+combinedFinal.c (line-by-line)
+
+Linux:
+
+Run 1:
+The total 'ftime' time:      0.002
+The total 'getCPUtime' time:      0.000
+
+Run 2:
+The total 'ftime' time:      0.002
+The total 'getCPUtime' time:      0.000
+
+Run 3:
+The total 'ftime' time:      0.001
+The total 'getCPUtime' time:      0.000
+
+
+Windows:
+
+Run 1:
+The total 'ftime' time:      0.003
+The total 'getCPUtime' time:      0.000
+
+Run 2:
+The total 'ftime' time:      0.002
+The total 'getCPUtime' time:      0.000
+
+Run 3:
+The total 'ftime' time:      0.002
+The total 'getCPUtime' time:      0.000
+

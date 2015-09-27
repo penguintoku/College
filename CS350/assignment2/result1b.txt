@@ -1,0 +1,101 @@
+Tokumaru Yahashi
+CS 350
+Project 1B: Results
+
+All the test was done on the same computer restarted at the G7 computer and PODS windows computer. The test file was 583.6KB.
+
+Interesting enough, the PCwithThread was much slower than the other file combinedFinal. The fastest of them all was line by line followed by character by character. Lastly the PCwithThreads which was interesting.
+---------------------------------------------------------------------------
+PCwithThread.cpp
+
+Linux:
+
+Run 1:
+get_wall_clock_diff time: 0.023000
+get_cpu_time_diff: 0.000000
+
+Run 2:
+get_wall_clock_diff time: 0.026000
+get_cpu_time_diff: 0.000000
+
+Run 3:
+get_wall_clock_diff time: 0.023000
+get_cpu_time_diff: 0.000000
+
+
+Windows:
+
+Run 1:
+get_wall_clock_diff time: 0.025000
+get_cpu_time_diff: 0.000000
+
+Run 2:
+get_wall_clock_diff time: 0.025000
+get_cpu_time_diff: 0.000000
+
+Run 3:
+get_wall_clock_diff time: 0.024000
+get_cpu_time_diff: 0.000000
+
+---------------------------------------------------------------------------
+combinedFinal.c (character-by-character)
+
+Linux:
+
+Run 1:
+The total 'ftime' time:      0.019
+The total 'getCPUtime' time:      0.000
+
+Run 2:
+The total 'ftime' time:      0.012
+The total 'getCPUtime' time:      0.010
+
+Run 3:
+The total 'ftime' time:      0.018
+The total 'getCPUtime' time:      0.010
+
+Windows:
+
+Run 1:
+The total 'ftime' time:      0.017
+The total 'getCPUtime' time:      0.000
+
+Run 2:
+The total 'ftime' time:      0.019
+The total 'getCPUtime' time:      0.000
+
+Run 3:
+The total 'ftime' time:      0.016
+The total 'getCPUtime' time:      0.000
+
+---------------------------------------------------------------------------
+combinedFinal.c (line-by-line)
+
+Linux:
+
+Run 1:
+The total 'ftime' time:      0.001
+The total 'getCPUtime' time:      0.000
+
+Run 2:
+The total 'ftime' time:      0.002
+The total 'getCPUtime' time:      0.000
+
+Run 3:
+The total 'ftime' time:      0.002
+The total 'getCPUtime' time:      0.000
+
+
+Windows:
+
+Run 1:
+The total 'ftime' time:      0.002
+The total 'getCPUtime' time:      0.000
+
+Run 2:
+The total 'ftime' time:      0.001
+The total 'getCPUtime' time:      0.000
+
+Run 3:
+The total 'ftime' time:      0.001
+The total 'getCPUtime' time:      0.000

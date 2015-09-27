@@ -1,0 +1,57 @@
+1. Tokumaru Yahashi
+
+2. Project 1A (Reading & Writing character-by-character and line-by-line)
+
+3. Instructions
+	
+	a. Open terminal, "cd" all the way until you are the same 
+	directory with the file "character-by-character.c" or â"line-by-line.c"
+	
+	b. To compile, copy/paste: 
+		g++ -Wall -Wextra character-by-character.c
+		g++ -Wall -Wextra line-by-line.c
+	
+	c. To run, type:
+		./a.out
+
+4. PLEASE READ EVERYTHING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+	The compiler has the following flags:
+	
+		-Wall: for any warnings
+		-Wextra: extra warnings that aren't set in -Wall
+
+	The combined.c has fairly good comments. 
+
+	Avoided using gets() since it is dangerous when accessing
+	the buffer and all so used an alternative of scanf(). Before 
+	using scanf() their was some issues with fgets() that would 
+	not recognize any files so switched to scanf().
+
+	There is only one function and takes no arguments. 
+	The main function will run, ask user for input file name, 
+	output filename, provide errors if necessary, and copy from 
+	input file to output file. The user will be given 2 options,
+	1 for character-by-character and 2 for line-by-line. At the end
+	the program will provide the time of execution and close. If the user
+	fails to put 1 or 2, the program terminates.
+
+	The input and output file names MUST be less than 100 characters
+	since 100 is the allocated. If it is larger than 100, it will
+	no re-allocate and give segment fault.
+
+	For the line-by-line option, the lines MUST be less than
+	80 characters long or will give segment fault. 
+
+	To change the file width, go to line 23.
+
+	To change the width of each line go to line 95 and 98. 
+
+	You can also check to see if the code is doing correctly
+	by outputting character by character or line by line by
+	uncommenting line 78 and 100.
+
+	You MUST include the extention of what type of document
+	the output file will be or will give segment fault. It
+	will create a file but will not continue reading lines
+	and copy to output file. 
