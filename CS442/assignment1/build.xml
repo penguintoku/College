@@ -1,0 +1,78 @@
+<project name="csRegs" default="compile" basedir=".">
+
+  	<property name="build.compiler" value="modern"/>
+  	<property name="src" value="src"/>
+  	<property name="BUILD" value="build"/>
+  	<property name="classes" value="${BUILD}/classes"/>
+  	<property name="tarballFileName" value="csRegs.tar.gz"/>
+
+
+    <!-- To compile -->
+
+  	<target name="compile"
+            depends="csRegs"/>
+
+
+		<!-- To clean -->
+
+	  <target name="clean">
+  	  	<delete dir="${BUILD}"/>
+	  </target>
+
+
+  	<!-- Prepare target directories -->
+  	<target name="prepare">
+			<mkdir dir="${BUILD}"/>
+			<mkdir dir="${classes}"/>
+  	</target>
+
+
+  	<!-- ** means all subdirectories as well -->
+  	<!-- * means all files in the current directory -->
+  	<!-- for just java files use *.java -->
+
+  	<target name="csRegs" depends="prepare">
+    		<javac srcdir="${src}"
+               includes="csRegs/**"
+               excludes="**/package.html"
+               destdir="${classes}"
+               classpath="${classes}"
+               debug="on"
+               optimize="on"
+               deprecation="off"
+               includeantruntime = "false"/>
+  	</target>
+
+
+ 		<target name="jar">
+        <mkdir dir="${BUILD}/jar"/>
+        <jar destfile="${BUILD}/jar/csRegs.jar" basedir="${BUILD}/classes">
+            <manifest>
+                <attribute name="Main-Class" value="csRegs.driver.Driver"/>
+            </manifest>
+        </jar>
+    </target>
+
+
+		<!-- To create a tarball -->
+
+		<target name="tar">
+				<tar destfile="./${tarballFileName}"
+					   basedir="." compression="gzip"
+             includes="${src}/**, build.xml, README"/>
+		</target>
+
+
+		<!-- To run the file -->
+
+		<target name="run" depends="jar">
+				<java jar="${BUILD}/jar/csRegs.jar"  fork="true">
+						<arg value="dataFile"/>           <!-- File containing the names -->
+						<arg value="-1"/>                  <!-- NN: Amount of threads spawn for reading -->
+						<arg value="searchFile"/>         <!-- Searching File -->
+						<arg value="4"/>                  <!-- MM: Amount of threads spawn for searching -->
+						<arg value="0"/>                  <!-- DEBUG_LEVEL -->
+	 			</java>
+		</target>
+
+</project>

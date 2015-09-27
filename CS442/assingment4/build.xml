@@ -1,0 +1,76 @@
+<project name="genericCheckpointing" default="compile" basedir=".">
+
+    <property name="build.compiler" value="modern"/>
+    <property name="src" value="src"/>
+    <property name="BUILD" value="build"/>
+    <property name="classes" value="${BUILD}/classes"/>
+    <property name="tarballFileName" value="genericCheckpointing.tar.gz"/>
+
+
+    <!-- To compile -->
+
+    <target name="compile"
+            depends="genericCheckpointing"/>
+
+
+    <!-- To clean -->
+
+    <target name="clean">
+        <delete dir="${BUILD}"/>
+    </target>
+
+
+    <!-- Prepare target directories -->
+    <target name="prepare">
+      <mkdir dir="${BUILD}"/>
+      <mkdir dir="${classes}"/>
+    </target>
+
+
+    <!-- ** means all subdirectories as well -->
+    <!-- * means all files in the current directory -->
+    <!-- for just java files use *.java -->
+
+    <target name="genericCheckpointing" depends="prepare">
+        <javac srcdir="${src}"
+               includes="genericCheckpointing/**"
+               excludes="**/package.html"
+               destdir="${classes}"
+               classpath="${classes}"
+               debug="on"
+               optimize="on"
+               deprecation="off"
+               includeantruntime = "false"/>
+    </target>
+
+
+    <target name="jar">
+        <mkdir dir="${BUILD}/jar"/>
+        <jar destfile="${BUILD}/jar/genericCheckpointing.jar" basedir="${BUILD}/classes">
+            <manifest>
+                <attribute name="Main-Class" value="genericCheckpointing.driver.Driver"/>
+            </manifest>
+        </jar>
+    </target>
+
+
+    <!-- To create a tarball -->
+
+    <target name="tar">
+        <tar destfile="./${tarballFileName}"
+             basedir="." compression="gzip"
+             includes="${src}/**, build.xml, README"/>
+    </target>
+
+
+    <!-- To run the file -->
+
+    <target name="run" depends="jar">
+        <java jar="${BUILD}/jar/genericCheckpointing.jar"  fork="true">
+            <arg value="5"/>                  <!-- Number of objects -->
+            <arg value="dataFile.txt"/>       <!-- File the data -->
+            <arg value="0"/>                  <!-- DEBUG_LEVEL -->
+        </java>
+    </target>
+
+</project>

@@ -1,0 +1,24 @@
+User john active
+Process chrome sam 10% 40% browser
+User schpoopy active Process blah john 5% 10% blahblah
+Performance 70% 50% 8GB 4GB
+User poop active
+Performance 21% 34% 8GB 4GB
+Process activity hello 10% 40% browser
+Process word damn 12% 96% application
+Performance 53% 56% 8GB 4GB
+Performance 86% 23% 8GB 4GB
+Process terminal world 23% 76% utility
+User shkaka active
+User sam inactive
+Performance 76% 26% 8GB 4GB
+Process monitor tokes 34% 65% utility
+Performance 87% 45% 8GB 4GB
+User lala disconnected
+Performance 66% 67% 8GB 4GB
+User sam active
+Performance 3% 34% 8GB 4GB
+Process firefox alpha 53% 12% browser
+User shkaka active
+Performance 86% 32% 8GB 4GB
+User jim inactive

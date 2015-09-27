@@ -1,0 +1,95 @@
+<project name="chat" default="compile" basedir=".">
+
+  	<property name="build.compiler" value="modern"/>
+  	<property name="src" value="src"/>
+  	<property name="BUILD" value="BUILD"/>
+  	<property name="classes" value="${BUILD}/classes"/>
+  	<property name="tarballFileName" value="chat.tar.gz"/>
+
+
+    <!-- To compile -->
+
+  	<target name="compile"
+            depends="chat"/>
+
+
+		<!-- To clean -->
+
+	  <target name="clean">
+  	  	<delete dir="${BUILD}"/>
+        <delete file="BACKUP.txt"/>
+	  </target>
+
+
+  	<!-- Prepare target directories -->
+  	<target name="prepare">
+			<mkdir dir="${BUILD}"/>
+			<mkdir dir="${classes}"/>
+  	</target>
+
+
+  	<!-- ** means all subdirectories as well -->
+  	<!-- * means all files in the current directory -->
+  	<!-- for just java files use *.java -->
+
+  	<target name="chat" depends="prepare">
+    		<javac srcdir="${src}"
+               includes="chat/**"
+               excludes="**/package.html"
+               destdir="${classes}"
+               classpath="${classes}"
+               debug="on"
+               optimize="on"
+               deprecation="off"
+               includeantruntime = "false"/>
+  	</target>
+
+
+ 		<target name="jar">
+        <mkdir dir="${BUILD}/jar"/>
+        <jar destfile="${BUILD}/jar/chat.jar" basedir="${BUILD}/classes">
+            <manifest>
+                <attribute name="Main-Class" value="chat.driver.Driver"/>
+            </manifest>
+        </jar>
+    </target>
+
+
+		<!-- To create a tarball -->
+
+		<target name="tar">
+				<tar destfile="./${tarballFileName}"
+					   basedir="." compression="gzip"
+             includes="${src}/**, build.xml, README"/>
+		</target>
+
+
+
+
+
+
+
+
+
+
+<!-- DO NOT USE THE FOLLOWING COMMAND! -->
+		<!-- To run the file -->
+
+	<target name="runServer" depends="jar">
+      <java jar="${BUILD}/jar/chat.jar"  fork="true">
+        <arg value="Server"/>
+        <arg value="4444"/>
+      </java>
+  </target>
+
+    <!-- To run the file -->
+
+  <target name="runClient" depends="jar">
+      <java jar="${BUILD}/jar/chat.jar"  fork="true">
+        <arg value="Client"/>
+        <arg value="q22-39"/>
+        <arg value="4444"/>
+      </java>
+  </target>
+
+</project>
