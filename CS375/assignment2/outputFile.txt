@@ -1,0 +1,6 @@
+Cords are: 
+66 249 382
+67 253 383
+Distance: 4.24264
+Brute Force time: 0.035161
+Divide and Conquer time: 0.001745

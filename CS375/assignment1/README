@@ -1,0 +1,30 @@
+HOW TO:
+
+	1. Open terminal and go to the same dircetory as where
+	this program is located.
+	
+	2. Once reaching the same directory, simply type "make"
+
+	3. type "./" and press tab for auto-fill. Then type "in" and tab
+	for auto-fill. Then type "out" and tab for auto fill.
+	***THIS PROGRAM MUST HAVE THREE COMPONENTS TO RUN!!!***
+		-You will need to exe file, input, and output files.
+		-I have made it so that it will not run without all three.
+		-The reason is for 4.6 of the assignment must have three prompts.
+		It should look like: $ ./Submission.exe inputFile.txt output.txt
+
+	4. When all done, type "make clean"
+
+DETAIL:
+
+	The algorithm I used in this program is binary search.
+	I used binary search to find to two values that will 
+	find 2 keys and equal to another key. 
+
+	I have also used the sort function provided in the C++ libary.
+
+	The worst case of this would be O(n^2 log n)
+
+	Tokumaru Yahashi
+	CS375
+	9/24/13

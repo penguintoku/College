@@ -1,0 +1,2 @@
+https://github.com/sxs9174/Longest-common-subsequence/blob/master/lcs_dynamic_programming.cpp
+http://rosettacode.org/wiki/Longest_common_subsequence#C

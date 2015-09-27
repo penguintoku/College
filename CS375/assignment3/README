@@ -1,0 +1,22 @@
+HOW TO:
+
+	1. Open terminal and go to the same dircetory as where
+	this program is located.
+	
+	2. Once reaching the same directory, simply type "make"
+
+	3. type "./" and press tab for auto-fill. 
+
+	4. When all done, type "make clean"
+
+DETAIL:
+
+	All of the following will be doing Dynamic Programming using
+	psuedo-code from wiki.
+
+	All results will be displayed on the console
+
+
+	Tokumaru Yahashi
+	CS375
+	10/24/13
