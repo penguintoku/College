@@ -1,0 +1,170 @@
+CS426 Wireless Sensor Network
+Spring 2014
+FINAL PROJECT README FILE
+
+Due Date: Friday, May 16, 2014
+Submission Date: Friday, May 16, 2014
+Author(s):	Nagihan Cay
+			Carolyn P. Forney
+			Ece Tug
+			Tokumaru Yahashi
+e-mail(s):	ncay1@binghamton.edu
+			forney1@binghamton.edu
+			etug1@binghamton.edu
+			tyahash1@binghamton.edu
+
+PURPOSE:
+
+	The purpose of this project is:
+		1. To find out how different pricing models and different user strategies affect the aggregate power of a community.
+		2. Try to find a balance between the models so that peak load is reduced.
+		3. Explore what will bring to the power line in community where users have different pricing models.
+
+
+PERCENT COMPLETE:
+
+	* 80% of the overall has been completed
+
+
+PARTS THAT ARE NOT COMPLETE:
+
+	* The Appliance code
+	* The Min and Max of each day for Real Time Pricing
+
+
+BUGS:
+
+	* This program will use a lot of memory!
+
+
+FILES:
+
+	There is a total of 13 files for this project:
+
+		README.txt, the current file you are reading that has all information
+		
+		Community.cpp, Displays the total price and energy with each hour of energy.
+		Community.h, the header file for Community.cpp
+		House.cpp, The individual house of community made.
+		House.h, the header file for House.cpp
+		Driver.cpp, the main function
+
+		makefile, to compile the code
+
+		config.txt, the file to change in order to get results
+			~ Please Read Driver.cpp in order to see how to run.
+
+		FP.csv, Fixed Price data
+		rtp.csv, Real Time Pricing data
+		illinoisTOU.csv, One of the Time Of Use file
+		ontarioTOU.csv, One of the Time Of Use file
+
+		20housedata.zip, zip that contains 20 different house data.
+
+		One file is not accounted for which is the result of the runned program. Go to the Driver.cpp to change the preference file name.
+
+
+SAMPLE OUTPUT:
+
+	Tokumarus-MacBook-Pro:Code tyahashi$ ./lab 
+	Number of Houses: 5
+	Assigning 1.csv to 1 houses.
+	Assigning 2.csv to 1 houses.
+	Assigning 6.csv to 1 houses.
+	Assigning 7.csv to 1 houses.
+	Assigning 9.csv to 1 houses.
+	All houses have been assigned energy data. 
+	EnergyBool val set to 1.
+	Assigning illinoisTOU.csv to 5 houses for 56 days.
+	All houses have been assigned Price data. 
+	PriceBool val set to 1.
+	BatteryBool val set to 1.
+	ApplianceBool val set to 1.
+
+
+PRE-COMPILE:
+
+	* You will need to unzip the 20housedata.zip to get the house 
+	* After unzipping the file, you must move the house data (are #.csv) with the rest of the files (where Driver.cpp) is located.
+	* Change the desired output file name from the Driver.cpp 
+	* PLEASE READ THE NOTES ON DRIVER.CPP which tells you what each symbol indicates for the config.txt
+	* Open config.txt to change the results you want.
+
+
+SITUATION:
+	
+	* When inputting the file in config.txt, you don not need to do some options:
+		~ If you are using rtp.csv, you do not need to input the number of day.
+			(# of houses to assign) rtp.csv
+		~ Anything besides rtp.csv, you must add the number of days to run
+			- Since our house data only had 2 months (56 days) worth of data throughout all houses, do NOT exceeed 56 days!
+				(# of houses to assign) (some csv) (# of days)
+		~ Please have all symbols in the config.txt (!,@,#,$) so the program doesn't get confused.
+		~ Please be aware that we have not completed the appliance side of the code so do not add any number after the # or before the $ sign.
+		
+		EXAMPLE:
+			10
+			1 1.csv
+			1 2.csv
+			1 6.csv
+			1 7.csv
+			1 9.csv
+			1 10.csv
+			1 11.csv
+			1 12.csv
+			1 16.csv
+			1 17.csv
+			!
+			5 illinoisTOU.csv 56
+			5 rtp.csv
+			@
+			5
+			#
+			$
+
+			The following example says: 
+				There is going to be 10 houses in the community
+				1 house of 1.csv data (which is the house data)
+				1 house of 2.csv data
+				...
+				1 house of 17.csv data
+				!
+				5 houses will be assigned to the data illinoisTOU.csv (Time of Use) pricing plan for 56 days
+				5 houses will be assigned to the data rtp.csv (Real Time Pricing) pricing plan
+				@
+				5 houses will be using battery strategy
+				#
+				$
+
+
+
+TO COMPILE:
+
+	* Extract the directories
+	* Go to the directory of this project
+	* In terminal type: make
+
+
+TO RUN:
+
+	* In terminal type: ./lab
+	*** TO CHANGE THE DATA YOU MUST CHANGE IT IN THE FILE config.txt ***
+		~ You will NOT have to re-compile if you only change the data.
+
+
+EXTRA CREDIT:
+
+	* N/A
+
+
+BIBLIOGRAPHY:
+
+This serves as evidence that we are in no way intending Academic Dishonesty.
+Nagihan Cay, Carolyn P. Forney, Ece Tug, and Tokumaru Yahashi
+
+
+ACKNOWLEDGEMENT:
+
+	Professor Ting Zhu
+	Graduate Students who helped us
+	David Skoda
