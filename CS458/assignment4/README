@@ -1,0 +1,19 @@
+Name: Tokumaru Yahashi 
+
+Email: tyahash1@binghamton.edu
+
+Tested: Yes
+
+Decription: Nothing special. 
+Comments provided in the file.
+
+Make certifcate before running:
+openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days XXX
+XXX : the days. 1 - 999
+
+
+Execute:
+make
+./server <certificate> <key> <port number>
+./client <hostname> <port number>
+make clean

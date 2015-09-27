@@ -1,0 +1,10 @@
+Name: Tokumaru Yahashi 
+Email: tyahash1@binghamton.edu
+Tested in bingsuns: Yes
+Execute: ./rc6 [inputfile] [outputfile]
+Describe: 
+The algorithm implemented is off the pdf given.
+There is all the test files taken by the pdf
+"make clean" to clean up
+
+pdf: http://people.csail.mit.edu/rivest/pubs/RRSY98.pdf

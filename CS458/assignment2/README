@@ -1,0 +1,12 @@
+Name: Tokumaru Yahashi 
+
+Email: tyahash1@binghamton.edu
+
+Tested on G7: Yes
+
+Decription: Nothing special. 
+Comments provided in the file.
+
+Execute:
+g++ main.cc fscrypt.cc -lcrypto
+gcc main.cc fscrypt.cc -lcrypto -lstdc++
